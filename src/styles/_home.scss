@@ -1,0 +1,9 @@
+@use 'variables';
+@use 'mixins';
+
+.home{
+	@include mixins.default-grid;
+    background: ivory;
+    height: 100vh;
+    width: 100vw;
+}

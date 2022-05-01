@@ -1,0 +1,112 @@
+@use 'variables';
+@use 'mixins';
+  
+.cube {
+  @include mixins.default-grid;
+
+  &__slot{
+    place-self: center center;
+  }
+
+  &__content{
+    @include mixins.default-grid;
+    place-content: center center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo{
+    @include mixins.default-grid;
+    position: relative;
+  }
+
+  &__letter{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    color: rgba(244, 234, 230,1);
+    font-size: 5rem;
+  }
+}
+
+._front_bssuh_32 { background-color: rgba(229, 114, 131,1); }
+._right_bssuh_35 { background-color: rgba(66, 151, 160, 1); }
+._back_bssuh_38  { background-color: rgba(229, 114, 131,1); }
+._left_bssuh_41   { background-color: rgba(66, 151, 160, 1); }
+._top_bssuh_44    { background-color: rgba(244, 234, 230,1); }
+._bottom_bssuh_47 { background-color: rgba(244, 234, 230,1); }
+
+.enter-transition{
+    transition: transform 2s ease-in-out;
+}
+
+.exit-transition{
+    transition: transform 0.75s ease-in-out;
+}
+
+.initial-cube {
+  transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(-225deg) rotateZ(0deg) !important;
+}
+
+._cube_bssuh_1 {
+    cursor: pointer;
+}
+
+.e{
+	position: relative;
+	place-self: center center;
+
+	&_audiowide{
+		font-family: 'Audiowide', cursive;
+		font-size: 4rem;
+	}
+
+	&_dark{
+		color: var(--blue);
+	}
+
+	&__curve-up{
+		position: absolute;
+		bottom: 0.55rem;
+		left: 2rem;
+
+		width: 2rem;
+		height: 3.8rem;
+		border-radius: 0.6rem;
+
+		&_dark{
+			border-bottom: 10px solid var(--blue);
+			border-right: 10px solid var(--blue);
+		}
+	}
+
+	&__curve-down{
+		position: absolute;
+		bottom: -0.35rem;
+		right: -1rem;
+
+		width: 4.95rem;
+		height: 4.95rem;
+		border-radius: 0.6rem;
+
+		&_dark{
+			border-top: 10px solid var(--blue);
+			border-left: 10px solid var(--blue);
+		}
+	}
+
+	&__curve-across{
+		position: absolute;
+		top: 3.5rem;
+		right: -1rem;
+
+		width: 4.95rem;
+		height: 1rem;
+		border-bottom-left-radius: 0.6rem;
+
+		&_dark{
+			border-bottom: 10px solid var(--blue);
+			border-left: 10px solid var(--blue);
+		}
+	}
+
+}

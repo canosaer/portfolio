@@ -2,13 +2,14 @@ import React from 'react'
 
 import { CubeTransition } from 'react-3d-cube-transition'
 import 'react-3d-cube-transition/dist/index.css'
+import './styles/main.scss'
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import Features from './Pages/Features';
-import Gallery from './Pages/Gallery';
+import Skills from './Pages/Skills';
+import Projects from './Pages/Projects';
 
 import Home from './Pages/Home';
-import Intro from './Pages/Intro';
+import Other from './Pages/Other';
 
 class App extends React.Component {
   constructor() {
@@ -32,20 +33,20 @@ class App extends React.Component {
           topCSS={{background: "#aa9583"}}
           bottomCSS={{background: "#aa9583"}}
           frontPage={(<Home />)}
-          leftPage={<Intro />}
-          rightPage={<Features />}
-          backPage={<About />}
-          topPage={<Gallery />}
+          leftPage={<About />}
+          rightPage={<Skills />}
+          backPage={<Projects />}
+          topPage={<Other />}
           bottomPage={<Contact />}
           contentElevation={0}
         />
-        <div style={{position: "absolute", bottom: "5vh", width:"100vw", transform: "translateX(20%)"}}>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("front"))}>Home</button>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("left"))}>Bio</button>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("right"))}>Features</button>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("back"))}>About</button>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("top"))}>Gallery</button>
-          <button style={{margin: 10}} onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
+        <div className="nav-menu">
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("front"))}>Home</button>
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("right"))}>Skills</button>
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("back"))}>React Projects</button>
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("top"))}>Other Projects</button>
+          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
         </div>
       </>
     )
