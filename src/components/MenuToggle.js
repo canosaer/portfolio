@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import LogoCube from './LogoCube';
 
 export default function Header() {
     const [menuOpen, setMenuOpen ] = useState(false);
@@ -45,9 +44,7 @@ export default function Header() {
     }, [menuOpen]);
 
     return(
-        <header className="header">
-
-            <h1 className="header__heading"><LogoCube /></h1>
+        <>
             <div className={dimmerStyles}></div>
             <button className="toggle" onClick={() => setMenuOpen(!menuOpen)}>
                 {toggleBars.map((bar, i) => {
@@ -66,6 +63,6 @@ export default function Header() {
                     <li className="menu__item"><a href="mailto:canosaer@gmail.com" onClick={() => menuOpen ? setMenuOpen(!menuOpen) : null} className="menu__link">Contact <div className="menu__bar"></div> </a></li>
                 </ul>
             </nav>
-        </header>
+        </>
     )
 }

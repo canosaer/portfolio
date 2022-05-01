@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { CubeTransition } from 'react-3d-cube-transition'
 import 'react-3d-cube-transition/dist/index.css'
@@ -41,12 +41,12 @@ class App extends React.Component {
           contentElevation={0}
         />
         <div className="nav-menu">
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("front"))}>Home</button>
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("right"))}>Skills</button>
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("back"))}>React Projects</button>
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("top"))}>Other Projects</button>
-          <button className="nav-menu__button" onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
+          <button className="nav-menu__button nav-menu__button_home" onClick={() => (this._handleButtonClick("front"))}>Home</button>
+          <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
+          <button className="nav-menu__button nav-menu__button_skills" onClick={() => (this._handleButtonClick("right"))}>Skills</button>
+          <button className="nav-menu__button nav-menu__button_react" onClick={() => (this._handleButtonClick("back"))}>React Projects</button>
+          <button className="nav-menu__button nav-menu__button_other" onClick={() => (this._handleButtonClick("top"))}>Other Projects</button>
+          <button className="nav-menu__button nav-menu__button_contact" onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
         </div>
       </>
     )

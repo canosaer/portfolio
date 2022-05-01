@@ -50,11 +50,11 @@ const LogoCube = () => {
         <>
             <div className="cube__slot" ref={containerDiv} onMouseDown={(cubeLocked && ready) ? unlockCube : null}
             style={{
-                width: 100,
-                height: 100,
+                width: 150,
+                height: 150,
             }}
             >
-                <Cube size={100} index="front">
+                <Cube size={150} index="front">
                     <div className="cube__content"><p className="cube__letter">E</p></div>
                     <div className="cube__content"><p className="cube__letter">C</p></div>
                     <div className="cube__content"><p className="cube__letter">E</p></div>

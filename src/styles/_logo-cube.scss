@@ -6,6 +6,14 @@
 
   &__slot{
     place-self: center center;
+
+	@media (min-width: 500px) {
+		transform: scale(1.5);
+	}
+
+	@include mixins.landscape{
+		transform: scale(1.75);
+	}
   }
 
   &__content{
@@ -24,7 +32,7 @@
     text-align: center;
     font-family: 'Audiowide', cursive;
     color: rgba(244, 234, 230,1);
-    font-size: 5rem;
+    font-size: 6.3rem;
   }
 }
 
@@ -57,7 +65,7 @@
 
 	&_audiowide{
 		font-family: 'Audiowide', cursive;
-		font-size: 4rem;
+		font-size: 5.75rem;
 	}
 
 	&_dark{
@@ -66,46 +74,46 @@
 
 	&__curve-up{
 		position: absolute;
-		bottom: 0.55rem;
-		left: 2rem;
+		bottom: 0.85rem;
+		left: 3.1rem;
 
-		width: 2rem;
-		height: 3.8rem;
+		width: 2.5rem;
+		height: 5.45rem;
 		border-radius: 0.6rem;
 
 		&_dark{
-			border-bottom: 10px solid var(--blue);
-			border-right: 10px solid var(--blue);
+			border-bottom: 12px solid var(--blue);
+			border-right: 12px solid var(--blue);
 		}
 	}
 
 	&__curve-down{
 		position: absolute;
-		bottom: -0.35rem;
-		right: -1rem;
+		bottom: -0.3rem;
+		right: -1.1rem;
 
-		width: 4.95rem;
-		height: 4.95rem;
+		width: 6.6rem;
+		height: 6.6rem;
 		border-radius: 0.6rem;
 
 		&_dark{
-			border-top: 10px solid var(--blue);
-			border-left: 10px solid var(--blue);
+			border-top: 12px solid var(--blue);
+			border-left: 12px solid var(--blue);
 		}
 	}
 
 	&__curve-across{
 		position: absolute;
-		top: 3.5rem;
-		right: -1rem;
+		top: 5.25rem;
+		right: -1.2rem;
 
-		width: 4.95rem;
+		width: 6.7rem;
 		height: 1rem;
 		border-bottom-left-radius: 0.6rem;
 
 		&_dark{
-			border-bottom: 10px solid var(--blue);
-			border-left: 10px solid var(--blue);
+			border-bottom: 12px solid var(--blue);
+			border-left: 12px solid var(--blue);
 		}
 	}
 
