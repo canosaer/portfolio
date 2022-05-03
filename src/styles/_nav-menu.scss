@@ -4,15 +4,8 @@
 .nav-menu {
   display: flex;
   flex-direction: column;
-  
 
-  @media (min-width: 420px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  @media (min-width: 780px) {
+  @media (min-width: 455px) {
     flex-direction: row;
     flex-wrap: unset;
     justify-content: space-between;
@@ -24,9 +17,7 @@
   bottom: 1.5rem;
 
   &__button{
-    @media (min-width: 420px) {
-        margin-bottom: 0.5rem;
-    }
+
   }
   
 }

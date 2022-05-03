@@ -6,6 +6,7 @@
 
   &__slot{
     place-self: center center;
+	display: none;
 
 	@media (min-width: 500px) {
 		transform: scale(1.5);
@@ -24,8 +25,11 @@
   }
 
   &__logo{
-    @include mixins.default-grid;
-    position: relative;
+    width: 7.3rem;
+	height: 7.3rem;
+	background-image: url("../img/elogo.png");
+	@include mixins.default-background;
+	place-self: center center;
   }
 
   &__letter{
@@ -57,64 +61,4 @@
 
 ._cube_bssuh_1 {
     cursor: pointer;
-}
-
-.e{
-	position: relative;
-	place-self: center center;
-
-	&_audiowide{
-		font-family: 'Audiowide', cursive;
-		font-size: 5.8rem;
-	}
-
-	&_dark{
-		color: var(--blue);
-	}
-
-	&__curve-up{
-		position: absolute;
-		bottom: 0.9rem;
-		left: 3.1rem;
-
-		width: 2.5rem;
-		height: 5.45rem;
-		border-radius: 0.6rem;
-
-		&_dark{
-			border-bottom: 12px solid var(--blue);
-			border-right: 12px solid var(--blue);
-		}
-	}
-
-	&__curve-down{
-		position: absolute;
-		bottom: -0.25rem;
-		right: -1.1rem;
-
-		width: 6.6rem;
-		height: 6.6rem;
-		border-radius: 0.6rem;
-
-		&_dark{
-			border-top: 12px solid var(--blue);
-			border-left: 12px solid var(--blue);
-		}
-	}
-
-	&__curve-across{
-		position: absolute;
-		top: 5.25rem;
-		right: -1.2rem;
-
-		width: 6.7rem;
-		height: 1rem;
-		border-bottom-left-radius: 0.6rem;
-
-		&_dark{
-			border-bottom: 12px solid var(--blue);
-			border-left: 12px solid var(--blue);
-		}
-	}
-
 }

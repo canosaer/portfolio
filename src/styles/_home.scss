@@ -4,7 +4,17 @@
 
 .home{
 	@include mixins.default-grid;
-    background: linear-gradient(var(--blue), var(--teal));
-    height: 100vh;
+    // background: linear-gradient(var(--blue), var(--teal));
+    background: var(--blue);
+    height: 100%;
     width: 100vw;
+}
+
+.circle1{
+    width: 11rem;
+    height: 12rem;
+    border: 10px dashed var(--ivory);
+    place-self: center center;
+    border-radius: 999rem;
+    position: relative;
 }

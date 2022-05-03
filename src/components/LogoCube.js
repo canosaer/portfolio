@@ -61,20 +61,12 @@ const LogoCube = () => {
                     <div className="cube__content"><p className="cube__letter">C</p></div>
                     <div className="cube__content">
                         <div className="cube__logo">
-                            <div className="e e_audiowide e_dark"> E
-                                <div className="e__curve-up e__curve-up_dark"></div>
-                                <div className="e__curve-down e__curve-down_dark"></div>
-                                <div className="e__curve-across e__curve-across_dark"></div>
-                            </div>
+                            {/* <figure classNeme="cube__e"></figure> */}
                         </div>
                     </div>
                     <div className="cube__content">
                         <div className="cube__logo">
-                            <div className="e e_audiowide e_dark"> E
-                                <div className="e__curve-up e__curve-up_dark"></div>
-                                <div className="e__curve-down e__curve-down_dark"></div>
-                                <div className="e__curve-across e__curve-across_dark"></div>
-                            </div>
+                            {/* <figure classNeme="cube__e"></figure> */}
                         </div>
                     </div>
                 </Cube>

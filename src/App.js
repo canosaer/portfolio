@@ -33,19 +33,19 @@ class App extends React.Component {
           topCSS={{background: "#aa9583"}}
           bottomCSS={{background: "#aa9583"}}
           frontPage={(<Home />)}
-          leftPage={<About />}
+          leftPage={<Other />}
           rightPage={<Skills />}
-          backPage={<Projects />}
-          topPage={<Other />}
+          backPage={<About />}
+          topPage={<Projects />}
           bottomPage={<Contact />}
           contentElevation={0}
         />
         <div className="nav-menu">
           <button className="nav-menu__button nav-menu__button_home" onClick={() => (this._handleButtonClick("front"))}>Home</button>
-          <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
-          <button className="nav-menu__button nav-menu__button_skills" onClick={() => (this._handleButtonClick("right"))}>Skills</button>
-          <button className="nav-menu__button nav-menu__button_react" onClick={() => (this._handleButtonClick("back"))}>React Projects</button>
-          <button className="nav-menu__button nav-menu__button_other" onClick={() => (this._handleButtonClick("top"))}>Other Projects</button>
+          {/* <button className="nav-menu__button nav-menu__button_other" onClick={() => (this._handleButtonClick("left"))}>Other</button> */}
+          {/* <button className="nav-menu__button nav-menu__button_skills" onClick={() => (this._handleButtonClick("right"))}>Skills</button> */}
+          <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("back"))}>About Me</button>
+          <button className="nav-menu__button nav-menu__button_projects" onClick={() => (this._handleButtonClick("top"))}>Projects</button>
           <button className="nav-menu__button nav-menu__button_contact" onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
         </div>
       </>
