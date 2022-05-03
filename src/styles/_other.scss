@@ -1,9 +1,11 @@
 @use 'variables';
 @use 'mixins';
 
-.about{
+
+.other{
 	@include mixins.default-grid;
     height: 100%;
     width: 100vw;
-    background: linear-gradient(var(--blue), var(--teal));
+    // background: linear-gradient(var(--blue), var(--coral));
+    background: black;
 }

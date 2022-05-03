@@ -9,16 +9,20 @@
     flex-direction: row;
     flex-wrap: unset;
     justify-content: space-between;
+    width: 100%;
+    max-width: 37.75rem;
   }
 
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1.5rem;
+  bottom: 2.8rem;
 
   &__button{
     font-family: var(--heading-font);
     font-size: 1.4rem;
+    padding: 0 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
   }
   
 }

@@ -26,27 +26,27 @@ class App extends React.Component {
         <CubeTransition 
           className="cube-container"
           face={this.state.currentFace}
-          frontCSS={{background: "#9d848f"}}
-          rightCSS={{background: "#aa9583"}}
-          leftCSS={{background: "#aa9583"}}
-          backCSS={{background: "#aa9583"}}
-          topCSS={{background: "#aa9583"}}
-          bottomCSS={{background: "#aa9583"}}
+          frontCSS={{background: "whitesmoke"}}
+          rightCSS={{background: "whitesmoke"}}
+          leftCSS={{background: "whitesmoke"}}
+          backCSS={{background: "whitesmoke"}}
+          topCSS={{background: "whitesmoke"}}
+          bottomCSS={{background: "whitesmoke"}}
           frontPage={(<Home />)}
-          leftPage={<Other />}
-          rightPage={<Skills />}
-          backPage={<About />}
-          topPage={<Projects />}
-          bottomPage={<Contact />}
+          leftPage={<About />}
+          rightPage={<Projects />}
+          backPage={<Contact />}
+          topPage={<Skills />}
+          bottomPage={<Other />}
           contentElevation={0}
         />
         <div className="nav-menu">
           <button className="nav-menu__button nav-menu__button_home" onClick={() => (this._handleButtonClick("front"))}>Home</button>
-          {/* <button className="nav-menu__button nav-menu__button_other" onClick={() => (this._handleButtonClick("left"))}>Other</button> */}
-          {/* <button className="nav-menu__button nav-menu__button_skills" onClick={() => (this._handleButtonClick("right"))}>Skills</button> */}
-          <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("back"))}>About Me</button>
-          <button className="nav-menu__button nav-menu__button_projects" onClick={() => (this._handleButtonClick("top"))}>Projects</button>
-          <button className="nav-menu__button nav-menu__button_contact" onClick={() => (this._handleButtonClick("bottom"))}>Contact</button>
+          <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
+          <button className="nav-menu__button nav-menu__button_projects" onClick={() => (this._handleButtonClick("right"))}>Projects</button>
+          <button className="nav-menu__button nav-menu__button_contact" onClick={() => (this._handleButtonClick("back"))}>Contact</button>
+          {/* <button className="nav-menu__button nav-menu__button_skills" onClick={() => (this._handleButtonClick("top"))}>Contact</button> */}
+          {/* <button className="nav-menu__button nav-menu__button_other" onClick={() => (this._handleButtonClick("bottom"))}>Skills</button> */}
         </div>
       </>
     )
