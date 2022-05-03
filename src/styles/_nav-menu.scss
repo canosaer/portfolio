@@ -3,26 +3,39 @@
   
 .nav-menu {
   display: flex;
-  flex-direction: column;
-
-  @media (min-width: 455px) {
-    flex-direction: row;
-    flex-wrap: unset;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 37.75rem;
-  }
-
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 37.75rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 2.8rem;
 
+  @media (min-width: 455px) {
+    justify-content: space-between;
+  }
+
   &__button{
     font-family: var(--heading-font);
-    font-size: 1.4rem;
-    padding: 0 1.5rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    padding: 0 0.35rem;
+    font-size: 0.8rem;
+
+    @media (min-width: 360px) {
+      font-size: 0.85rem;
+      padding: 0 0.8rem;
+    }
+
+    @media (min-width: 390px) {
+      font-size: 0.9rem;
+      padding: 0 0.8rem;
+    }
+
+
+    @media (min-width: 455px) {
+      font-size: 1.4rem;
+      padding: 0 1.5rem;
+    }
   }
   
 }
