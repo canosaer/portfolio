@@ -4,17 +4,16 @@
 
 .home{
 	@include mixins.default-grid;
-    // background: linear-gradient(var(--blue), var(--teal));
-    background: var(--blue);
     height: 100%;
     width: 100vw;
-}
 
-.circle1{
-    width: 11rem;
-    height: 12rem;
-    border: 10px dashed var(--ivory);
-    place-self: center center;
-    border-radius: 999rem;
-    position: relative;
+    &__heading{
+        font-family: var(--heading-font);
+        font-size: 6rem;
+        text-transform: var(--text-transform);
+        text-align: center;
+        z-index: 3;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    }
 }
