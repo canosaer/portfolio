@@ -11,6 +11,7 @@ export default function Home() {
     const whiteLines = [useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef(),useRef()]
   
     // useEffect(() => {       
+        // www.youtube.com/watch?v=PNL9DaZgHpU
     //     console.log(width)     
     //     tl.current = gsap.timeline()
     //         .from(q(".circle1"), {
