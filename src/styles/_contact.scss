@@ -4,7 +4,7 @@
 
 .contact{
 	@include mixins.default-grid;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(var(--ivory), var(--coral));
 }
