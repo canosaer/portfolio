@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   bottom: 2.8rem;
 
-  @media (min-width: 455px) {
+  @include mixins.landscape{
     justify-content: space-between;
   }
 
@@ -34,6 +34,14 @@
     @media (min-width: 455px) {
       font-size: 1.4rem;
       padding: 0 1.5rem;
+    }
+
+    &_home{
+      display: none;
+      
+      @include mixins.landscape{
+        display: block;
+      }
     }
   }
   
