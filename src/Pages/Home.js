@@ -1,99 +1,137 @@
-import React, { Component, useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import LogoCube from '../components/LogoCube'
 import {useWindowDimensions} from '../utilities'
 
-import FluidAnimation from "../react-fluid-animation";
-import random from "random";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
+export default function Home() {
 
-const defaultConfig = {
-    textureDownsample: 1,
-    densityDissipation: 1,
-    velocityDissipation: 0.99,
-    pressureDissipation: 0.93,
-    pressureIterations: 25,
-    curl: 30,
-    splatRadius: 0.015
-};
-
-  
-export default class Home extends Component {
-state = {
-    config: {
-    ...defaultConfig
-    }
-};
-
-componentDidMount() {
-    this._reset();
-}
-
-render() {
-    const { config } = this.state;
+    const particlesInit = async (main) => {  
+        await loadFull(main);
+    };
 
     return (
-    <div
-        style={{
-        height: "100vh",
-        pointerEvents: "none"
-        }}
-    >
-        <FluidAnimation config={config} animationRef={this._animationRef} />
-
-        <div
-            style={{
-                position: "absolute",
-                zIndex: 1,
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                padding: "1em",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                pointerEvents: "none",
-            }}
-        >
+        <section className="home">
             <h1 className="home__heading">Eric Canosa</h1>
-        </div>
-    </div>
+            <h2 className="home__subheading">Creative Technologist</h2>
+
+
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                options={{
+                background: {
+                    color: {
+                        value: "#4297A0",
+                    },
+                },
+                fpsLimit: 60,
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "attract",
+                        },
+                        parallax: { 
+                            enable: false, 
+                            force: 60, 
+                            smooth: 10 
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        push: {
+                            quantity: 4,
+                        },
+                        attract: {
+                            distance: 200,
+                            duration: 0.4,
+                            factor: 5,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#F4EAE6",
+                    },
+                    line_linked: {
+                        color: "#F4EAE6",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.4,
+                        width: 1,
+                    },
+                    move: {
+                        attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                        bounce: false,
+                        direction: "none",
+                        enable: true,
+                        out_mode: "out",
+                        random: false,
+                        speed: 1,
+                        straight: false
+                    },
+                    number: { 
+                        density: { 
+                            enable: true, 
+                            value_area: 800 
+                        }, 
+                        value: 80 
+                    },
+                    opacity: {
+                        anim: { 
+                            enable: false, 
+                            opacity_min: 0.1, 
+                            speed: 1, 
+                            sync: false 
+                        },
+                        random: false,
+                        value: 0.2,
+                    },
+                    shape: {
+                        character: {
+                        fill: false,
+                        font: "Verdana",
+                        style: "",
+                        value: "*",
+                        weight: "400"
+                        },
+                        image: {
+                        height: 100,
+                        replace_color: true,
+                        src: "images/github.svg",
+                        width: 100
+                        },
+                        polygon: { nb_sides: 5 },
+                        stroke: { color: "#000000", width: 0 },
+                        type: "circle"
+                    },
+                    size: {
+                        anim: { enable: false, size_min: 0.1, speed: 40, sync: false },
+                        random: true,
+                        value: 5
+                    }
+                },
+                polygon: {
+                    draw: { enable: false, lineColor: "#F4EAE6", lineWidth: 0.5 },
+                    move: { radius: 10 },
+                    scale: 1,
+                    type: "none",
+                    url: ""
+                },
+                detectRetina: true,
+                }}
+            />
+
+        </section>
+
+
+        
     );
-}
-
-_animationRef = ref => {
-    this._animation = ref;
-    this._reset();
-};
-
-_onUpdate = config => {
-    this.setState({ config });
-};
-
-_onClickRandomSplats = () => {
-    this._animation.addSplats((5 + Math.random() * 20) | 0);
-};
-
-_onReset = () => {
-    this.setState({ config: { ...defaultConfig } });
-};
-
-_reset() {
-    if (this._animation && window.innerWidth < 455) {
-        this._animation.addRandomSplats(random.int(3, 5));
-    }
-    else if (this._animation && window.innerWidth < 768) {
-        this._animation.addRandomSplats(random.int(3, 7));
-    }
-    else if(this._animation && window.innerWidth < 1200){
-        this._animation.addRandomSplats(random.int(8, 9));
-    }
-    else if(this._animation && window.innerWidth < 1700){
-        this._animation.addRandomSplats(random.int(10, 19));
-    }
-    else if(this._animation){
-        this._animation.addRandomSplats(random.int(10, 24));
-    }
-}
 }

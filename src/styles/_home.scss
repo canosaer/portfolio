@@ -8,16 +8,57 @@
     width: 100vw;
 
     &__heading{
+        grid-row: 1/2;
+        grid-column:1/2;
+        place-self: center center;
+        margin-bottom: 10rem;
         font-family: var(--heading-font);
         font-size: 6rem;
         text-transform: var(--text-transform);
         text-align: center;
-        z-index: 3;
+        z-index: 1;
         color: white;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+        pointer-events: none;
+
+        @media (min-width: 372px) {
+            margin-bottom: 5rem;
+        }
 
         @include mixins.landscape{
+            margin-bottom: 7.3rem;
             font-size: 8.4rem;
         }
+    }
+
+    &__subheading{
+        grid-row: 1/2;
+        grid-column:1/2;
+        margin-top: 10rem;
+        place-self: center center;
+        font-family: var(--heading-font);
+        font-size: 3rem;
+        text-transform: var(--text-transform);
+        text-align: center;
+        z-index: 1;
+        line-height: 1.1;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+        pointer-events: none;
+
+        @media (min-width: 372px) {
+            margin-top: 5rem;
+        }
+
+        @include mixins.landscape{
+            line-height: unset;
+            margin-top: 7.3rem;
+            font-size: 5.5rem;
+        }
+    }
+
+    #tsparticles{
+        grid-row: 1/2;
+        grid-column:1/2;
     }
 }
