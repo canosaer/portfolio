@@ -19,6 +19,10 @@
     padding: 0 0.2rem;
   }
 
+  @media (min-width: 455px) {
+    padding: unset;
+  }
+
   &__button{
     font-family: var(--heading-font);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
