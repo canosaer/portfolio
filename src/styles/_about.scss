@@ -17,30 +17,50 @@
         border-radius: 0.7rem;
         margin-top: 3rem;
         margin-bottom: 2rem;
+
+       @include mixins.landscape {
+            height: 17rem;
+            width: 17rem;
+        }
     }
 
     &__text{
         font-size: 1rem;
         line-height: 1.4;
+
+        @media (min-width: 415px) {
+            font-size: 1.4rem;
+        }
+
+        @include mixins.landscape {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__links{
+        margin-top: 2rem;
+        @include mixins.default-grid;
+        grid-template-columns: repeat(5,1fr);
     }
 
     &__link{
-        margin: 2rem 0.5rem 0;
         font-size: 1.5rem;
+        @include mixins.default-grid;
 
+        @include mixins.landscape {
+            font-size: 2rem;
+        }
 
         &_linkedin{
-            grid-column: 1/2;
-            grid-row: 3/4;
-            justify-self: left;
-            margin-left: 5rem;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-self: center;
         }
 
         &_resume{
-            grid-column: 1/2;
-            grid-row: 3/4;
-            justify-self: right;
-            margin-right: 5rem;
+            grid-column: 4/5;
+            grid-row: 1/2;
+            justify-self: center;
         }
     }
 }
