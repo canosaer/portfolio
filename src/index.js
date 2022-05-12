@@ -4,10 +4,10 @@ import App from './App';
 import {Store} from './store/store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faLinkedinIn, faEnvelope)
+library.add(faLinkedinIn, faEnvelope, faFile)
 
 ReactDOM.render(
     <Store>
