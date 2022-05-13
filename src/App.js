@@ -33,7 +33,6 @@ class App extends React.Component {
           contentElevation={0}
         />
         <div className="nav-menu">
-          <button className="nav-menu__button nav-menu__button_home" onClick={() => (this._handleButtonClick("front"))}>Home</button>
           <button className="nav-menu__button nav-menu__button_about" onClick={() => (this._handleButtonClick("left"))}>About Me</button>
           <button className="nav-menu__button nav-menu__button_projects" onClick={() => (this._handleButtonClick("right"))}>Projects</button>
           <button className="nav-menu__button nav-menu__button_contact" onClick={() => (this._handleButtonClick("back"))}>Contact</button>
