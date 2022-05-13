@@ -18,7 +18,7 @@
 	}
 
     &__heading{
-        margin-top: 1.4rem;
+        margin-top: 1.3rem;
         text-align: center;
         font-family: var(--heading-font);
         margin-bottom: 0.25rem;
@@ -42,10 +42,10 @@
     &__image{
         @include mixins.default-img;
         justify-self: center;
-        height: 15rem;
-        width: 15rem;
+        height: 14rem;
+        width: 14rem;
         border-radius: 0.7rem;
-        margin: 1.25rem 0 1.4rem;
+        margin: 1.1rem 0 1.3rem;
         box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.55);
 
         @media (min-width: 415px) {
@@ -82,7 +82,7 @@
     }
 
     &__links{
-        margin-top: 1.4rem;
+        margin-top: 1.3rem;
         @include mixins.default-grid;
         grid-template-columns: repeat(5,1fr);
 
