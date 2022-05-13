@@ -19,8 +19,9 @@
 
     &__heading-row{
         margin-top: 1.4rem;
-        font-size: 1.1rem;
+        font-size: 1.65rem;
         text-align: center;
+        font-family: var(--heading-font);
 
         &_desktop{
             display: none;
