@@ -45,7 +45,7 @@
         height: 15rem;
         width: 15rem;
         border-radius: 0.7rem;
-        margin: 1.4rem 0;
+        margin: 1.25rem 0 1.4rem;
         box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.55);
 
         @media (min-width: 415px) {
@@ -64,7 +64,7 @@
     }
 
     &__text{
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.4;
         text-align: center;
 
