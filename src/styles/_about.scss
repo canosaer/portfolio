@@ -17,37 +17,26 @@
 		grid-template-columns: 1fr minmax(0,80rem) 1fr;
 	}
 
-    &__heading-row{
+    &__heading{
         margin-top: 1.4rem;
-        font-size: 1.65rem;
         text-align: center;
         font-family: var(--heading-font);
+        margin-bottom: 0.25rem;
+        font-size: 2.85rem;
 
-        &_desktop{
-            display: none;
-
-            @media (min-width: 415px) {
-                display: block;
-            }
+        @media (min-width: 415px) {
+            font-size: 3rem;
         }
-
-        &_mobile{
-
-            @media (min-width: 415px) {
-                display: none;
-            }
-        }
-
-        
-    }
-
-    &__heading{
-        margin-right: 1rem;
-        position: relative;
     }
 
     &__subheading{
-
+        text-align: center;
+        font-family: var(--heading-font);
+        margin-bottom: 0.25rem;
+        font-size: 2rem;
+        @media (min-width: 415px) {
+            font-size: 2rem;
+        }
     }
 
     &__image{
@@ -58,6 +47,10 @@
         border-radius: 0.7rem;
         margin: 1.4rem 0;
         box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.55);
+
+        @media (min-width: 415px) {
+            margin: 2rem 0;
+        }
 
        @include mixins.landscape {
             height: 17rem;
@@ -76,7 +69,7 @@
         text-align: center;
 
         @media (min-width: 415px) {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         @include mixins.landscape {
@@ -92,6 +85,10 @@
         margin-top: 1.4rem;
         @include mixins.default-grid;
         grid-template-columns: repeat(5,1fr);
+
+        @media (min-width: 415px) {
+            margin-top: 2rem;
+        }
 
         @include mixins.landscape {
             margin-top: 3rem;
