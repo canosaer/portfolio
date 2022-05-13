@@ -6,7 +6,10 @@ export default function About() {
 
     return (
         <section className="about">
-            <div className="about__heading-row">
+            <div className="about__heading-row about__heading-row_mobile">
+                <h2 className="about__heading">Eric Canosa | Creative Technologist</h2>
+            </div>
+            <div className="about__heading-row about__heading-row_desktop">
                 <h2 className="about__heading">Eric Canosa</h2>
                 <h3 className="about__subheading">Creative Technologist</h3>
             </div>

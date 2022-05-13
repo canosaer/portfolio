@@ -18,22 +18,31 @@
 	}
 
     &__heading-row{
-        display: flex;
-        place-self: center center;
-        margin-top: 1.5rem;
-        font-size: 1.35rem;
+        margin-top: 1.4rem;
+        font-size: 1.1rem;
+        text-align: center;
+
+        &_desktop{
+            display: none;
+
+            @media (min-width: 415px) {
+                display: block;
+            }
+        }
+
+        &_mobile{
+
+            @media (min-width: 415px) {
+                display: none;
+            }
+        }
+
+        
     }
 
     &__heading{
         margin-right: 1rem;
         position: relative;
-
-        &:after{
-            content:"|";
-            position: absolute;
-            left: 7.45rem;
-            bottom: 0.1rem;
-        }
     }
 
     &__subheading{
@@ -46,7 +55,7 @@
         height: 15rem;
         width: 15rem;
         border-radius: 0.7rem;
-        margin: 1.5rem 0;
+        margin: 1.4rem 0;
         box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.55);
 
        @include mixins.landscape {
@@ -79,7 +88,7 @@
     }
 
     &__links{
-        margin-top: 1.5rem;
+        margin-top: 1.4rem;
         @include mixins.default-grid;
         grid-template-columns: repeat(5,1fr);
 
