@@ -18,11 +18,11 @@
 	}
 
     &__heading{
-        margin-top: 1.3rem;
+        margin-top: 1.25rem;
         text-align: center;
         font-family: var(--heading-font);
         margin-bottom: 0.25rem;
-        font-size: 2.85rem;
+        font-size: 2.75rem;
 
         @media (min-width: 415px) {
             font-size: 3rem;
@@ -33,7 +33,7 @@
         text-align: center;
         font-family: var(--heading-font);
         margin-bottom: 0.25rem;
-        font-size: 2rem;
+        font-size: 1.75rem;
         @media (min-width: 415px) {
             font-size: 2rem;
         }
@@ -64,7 +64,7 @@
     }
 
     &__text{
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         line-height: 1.4;
         text-align: center;
 
@@ -82,7 +82,7 @@
     }
 
     &__links{
-        margin-top: 1.3rem;
+        margin-top: 1.25rem;
         @include mixins.default-grid;
         grid-template-columns: repeat(5,1fr);
 
