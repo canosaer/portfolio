@@ -10,7 +10,6 @@ export default function Projects() {
     const [state, dispatch] = useContext(Context)
     const [projects, setProjects] = useState([])
     const [firstVisible, setFirstVisible] = useState(0)
-    const [prevFixer, setPrevFixer] = useState(0)
 
     const width = useWindowDimensions().width
     const height = useWindowDimensions().height
@@ -29,7 +28,10 @@ export default function Projects() {
             })
         }
 
-        setProjects(filteredProjects)
+        if(projects !== filteredProjects) {
+            setFirstVisible(0)
+            setProjects(filteredProjects)
+        }
     }, [state])
 
     return (
