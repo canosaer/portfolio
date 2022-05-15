@@ -14,7 +14,7 @@ export default function About() {
             </p>
             <div className="about__links">
                 <a className="about__link about__link_linkedin" href="https://www.linkedin.com/in/eric-canosa/" target="_blank">< FontAwesomeIcon className="about__icon about__icon_linkedin" icon={["fab", "linkedin-in"]} /> <p className="about__tooltip about__tooltip_linkedin">linkedin</p></a>
-                <a href="https://drive.google.com/file/d/17wwGRDBCCwqHd8I2leloJ0v7RyuHrJGX/view?usp=sharing" className="about__link about__link_resume" target="_blank"><FontAwesomeIcon className="about__icon about__icon_resume" icon={"file"} /><p className="about__tooltip about__tooltip_resume">resume</p></a>
+                <a href="https://drive.google.com/file/d/1SVMX3BShWaxJg3uSFFaW2KNWSPKKKoLM/view?usp=sharing" className="about__link about__link_resume" target="_blank"><FontAwesomeIcon className="about__icon about__icon_resume" icon={"file"} /><p className="about__tooltip about__tooltip_resume">resume</p></a>
             </div>
         </section>
     )

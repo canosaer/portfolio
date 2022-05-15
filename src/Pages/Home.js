@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import LogoCube from '../components/LogoCube'
-import {useWindowDimensions} from '../utilities'
+import React from 'react'
 
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";

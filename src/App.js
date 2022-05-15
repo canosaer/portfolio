@@ -22,10 +22,6 @@ class App extends React.Component {
         <CubeTransition 
           className="cube-container"
           face={this.state.currentFace}
-          frontCSS={{background: "whitesmoke"}}
-          rightCSS={{background: "whitesmoke"}}
-          leftCSS={{background: "whitesmoke"}}
-          backCSS={{background: "whitesmoke"}}
           frontPage={(<Home />)}
           leftPage={<About />}
           rightPage={<Projects />}

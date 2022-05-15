@@ -4,7 +4,186 @@
 
 .projects{
 	@include mixins.default-grid;
-    height: 100vh;
-    width: 100vw;
+    @include mixins.cube-face;
 	background: linear-gradient(var(--ivory), var(--teal));
+
+    &__heading{
+        @include mixins.page-heading;
+        color: var(--blue);
+    }
+
+	&__card-display{
+		@include mixins.default-grid;
+		padding: 1rem 3%;
+		grid-column-gap: 3%;
+		grid-row-gap: 4.25rem;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 0.29fr));
+
+		@include mixins.medium-screen{
+			grid-column: 2/3;
+		}
+	}
+
+	&__card{
+		@include mixins.image-slot;
+		padding-bottom: 100%;
+		background: var(--teal);
+		user-select: none;
+
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: -1rem;
+			border-bottom: dashed 3px var(--blue);
+			width: 100%;
+			cursor: default;
+		}
+
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: -3.2rem;
+			width: 100%;
+			height: 1.5rem;
+			background: var(--blue);
+			cursor: default;
+			border-radius: 0.7rem;
+		}
+	}
+
+	&__link-row{
+		position: absolute;
+		bottom: 1rem;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	&__link{
+		background-color: var(--coral);
+		padding: 10px;
+		color:var(--gray);
+		font-weight:bold;
+		border-radius: 0.7rem;
+		transition: all 200ms ease-in-out;
+
+		&:hover{
+			background: var(--blue);
+			color: unset;
+		}
+	}
+
+	&__subheading{
+		display: block;
+		font-weight: bold;
+		font-size: 1.8rem;
+		line-height: 1.1;
+		text-align: center;
+		margin: 1rem 1rem 0rem;
+		color: var(--gray);
+		text-transform: var(--text-transform);
+		font-family: var(--heading-font);
+
+		&:hover{
+			color: unset;
+		}
+
+		@include mixins.wide-screen{
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__caption{
+		margin-top: 0.5rem;
+		font-size: 0.85rem;
+		padding: 0 1.5rem;
+		line-height: 1.5;
+		text-align: center;
+	}
+
+	&__nav{
+		@include mixins.default-grid;
+		grid-column: 1/-1;
+	}
+
+	&__next{
+		@include mixins.projects-nav-button;
+		place-self: center end;
+	}
+
+	&__prev{
+		@include mixins.projects-nav-button;
+		place-self: center start;
+	}
+
+	&__right-arrow{
+		margin-left: 0.25rem;
+	}
+
+	&__left-arrow{
+		margin-right: 0.25rem;
+	}
+
+
+}
+
+.dropdown-filters{
+	font-size: 1.05rem;
+	margin: 0.5rem 3% 0;
+	padding: 0.25rem;
+	border-radius: 0.7rem;
+    background-color: var(--blue);
+    color: var(--ivory);
+    font-weight: bold;
+    font-family: var(--text-font);
+	place-self: center center;
+	outline: none;
+
+
+	@include mixins.landscape{
+		display: none;
+	}
+}
+
+.checkbox-filters{
+	display: none;
+
+	@include mixins.landscape{
+		display: flex;
+		padding: 0 3%;
+		margin-top: 1rem;
+		font-size: 1.05rem;
+
+		// @include mixins.medium-screen{
+		// 	grid-column: 2/3;
+		// }
+
+		&__category{
+			margin-right: 1.3rem;
+			user-select: none;
+		}
+	}
+}
+
+.swiper-container{
+    width: 100%;
+}
+
+.swiper-wrapper{
+    width: 100%;
+}
+
+.swiper-slide {
+    @include mixins.default-grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    width: 100%;
+    background: white;
+    color: black;
+    border: 1px solid red;
+}
+
+.swiper-pagination{
+    width: 100%;
+    height: 2rem;
 }

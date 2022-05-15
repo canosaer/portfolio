@@ -3,12 +3,9 @@
 
 .about{
 	@include mixins.default-grid;
-    width: 100vw;
-    min-height: 100vh;
+    @include mixins.cube-face;
     background: linear-gradient(var(--blue), var(--teal));
-    padding: 0 2rem;
-    grid-auto-rows: max-content;
-
+ 
     @include mixins.landscape {
         padding: 0 3.5rem;
     }
@@ -18,11 +15,7 @@
 	}
 
     &__heading{
-        margin-top: 1.2rem;
-        text-align: center;
-        font-family: var(--heading-font);
-        margin-bottom: 0.25rem;
-        font-size: 2.75rem;
+        @include mixins.page-heading;
 
         @media (min-width: 415px) {
             font-size: 3.25rem;
