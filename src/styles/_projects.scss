@@ -18,7 +18,7 @@
 		grid-column-gap: 3%;
 		grid-row-gap: 1.5rem;
 		justify-content: center;
-		grid-template-columns: repeat(auto-fit, minmax(13.25rem, 0.29fr));
+		grid-template-columns: repeat(auto-fit, minmax(14.5rem, 0.29fr));
 		position: relative;
 
 		@include mixins.medium-screen{
@@ -94,15 +94,15 @@
 			@include mixins.projects-nav-button;
 			position: absolute;
 			top: 107%;
-			right: -3rem;
+			right: -15vw;
 			// place-self: center end;
 			box-shadow: unset;
 			// margin-top: -1.25rem;
 			font-size: 1.5rem;
-			border: 3px solid var(--blue);
+			border: 3px solid var(--coral);
 			border-radius: 999rem;
 			z-index: 1;
-			color: var(--blue) !important;
+			color: var(--coral) !important;
 			
 			
 			// grid-row: 1/2;
@@ -113,7 +113,7 @@
 			line-height: unset;
 		
 			&:hover{
-				color: var(--blue) !important;
+				color: var(--coral) !important;
 				box-shadow: unset;
 			}
 		}
@@ -122,15 +122,15 @@
 			@include mixins.projects-nav-button;
 			position: absolute;
 			top: 107%;
-			left: -3rem;
+			left: -15vw;
 			// place-self: center start;
 			box-shadow: unset;
 			// margin-top: -1.25rem;
 			font-size: 1.5rem;
-			border: 3px solid var(--blue);
+			border: 3px solid var(--coral);
 			border-radius: 999rem;
 			z-index: 1;
-			color: var(--blue) !important;
+			color: var(--coral) !important;
 			
 			
 			// grid-row: 1/2;
@@ -141,7 +141,7 @@
 			line-height: unset;
 		
 			&:hover{
-				color: var(--blue) !important;
+				color: var(--coral) !important;
 				box-shadow: unset;
 			}
 		}
