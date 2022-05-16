@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import projectData from '../store/projectData'
 import {Context} from '../store/store'
 import {useWindowDimensions} from '../utilities'
@@ -13,7 +13,7 @@ export default function Filters() {
         if(e.target.id.includes('box')){
             const selectedTag = e.target.name
             if(tagsArray.includes(selectedTag)){
-                updatedTags = tagsArray.filter(tag => tag != selectedTag)
+                updatedTags = tagsArray.filter(tag => tag !== selectedTag)
             }
             else{
                 updatedTags = [...tagsArray, selectedTag]
@@ -21,7 +21,7 @@ export default function Filters() {
         }
         else{
             const selectedTag = e.target[e.target.selectedIndex].value
-            selectedTag != "all" ? updatedTags = [selectedTag] : updatedTags = []
+            selectedTag !== "all" ? updatedTags = [selectedTag] : updatedTags = []
         }
         dispatch ({type: 'UPDATE_TAGS', payload: updatedTags})
     }

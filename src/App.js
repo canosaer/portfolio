@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { CubeTransition } from 'react-3d-cube-transition'
 import 'react-3d-cube-transition/dist/index.css'
 import './styles/main.scss'

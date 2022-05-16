@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import projectData from '../store/projectData'
 import { Context } from '../store/store'
 import Filters from '../components/Filters'
@@ -46,11 +46,11 @@ export default function Projects() {
                     if(i >= firstVisible && i < firstVisible+increment){
                         return(
                             <article className="projects__card" key={key}>
-                                <a className="projects__subheading" href={project.url} target="_blank">{project.name}</a>
+                                <a className="projects__subheading" href={project.url} rel="noreferrer" target="_blank">{project.name}</a>
                                 <p className="projects__caption">{project.desc}</p>
                                 <div className="projects__link-row">
-                                    <a className="projects__link" href={project.url} target="_blank">View Site</a>
-                                    <a className="projects__link" href={project.repo} target="_blank">View Code</a>
+                                    <a className="projects__link" href={project.url} rel="noreferrer" target="_blank">View Site</a>
+                                    <a className="projects__link" href={project.repo} rel="noreferrer" target="_blank">View Code</a>
                                 </div>
                             </article>
                         )
