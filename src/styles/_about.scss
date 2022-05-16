@@ -25,7 +25,7 @@
 
         @include mixins.wide-screen {
             max-width: 80rem;
-            margin-bottom: 15%;
+            margin-bottom: 17%;
         }
     }
 
@@ -52,6 +52,11 @@
                 width: 10rem;
                 margin-right: 4vw;
             }
+
+            @include mixins.wide-screen {
+                height: 16.75rem;
+                width: 16.75rem;
+            }
         }
 
         &__text{
@@ -70,6 +75,10 @@
             @include mixins.landscape {
                 font-size: 3.75rem;
             }
+
+            @include mixins.wide-screen {
+                font-size: 5.75rem;
+            }
         }
 
         &__subheading{
@@ -81,6 +90,10 @@
 
             @include mixins.landscape {
                 font-size: 2.25rem;
+            }
+
+            @include mixins.wide-screen {
+                font-size: 3.9rem;
             }
         }
     }
@@ -94,27 +107,14 @@
         font-size: 1.2rem;
     }
 
-    // @include mixins.medium-screen{
-    //     grid-column: 2/3;
-    // }
+    @include mixins.wide-screen{
+        font-size: 1.85rem;
+    }
     }
 
     &__links{
-    @include mixins.default-grid;
-    grid-template-columns: repeat(5,1fr);
-    // margin-top: 1.5rem;
-
-    // @media (min-width: 415px) {
-    //     margin-top: 2rem;
-    // }
-
-    // @include mixins.landscape {
-    //     margin-top: 3rem;
-    // }
-
-    // @include mixins.medium-screen{
-    //     grid-column: 2/3;
-    // }
+        @include mixins.default-grid;
+        grid-template-columns: repeat(5,1fr);
     }
 
     &__link{
@@ -122,9 +122,9 @@
         @include mixins.default-grid;
         position: relative;
 
-        // @include mixins.landscape {
-        //     font-size: 2rem;
-        // }
+        @include mixins.wide-screen {
+            font-size: 2.4rem;
+        }
 
         &_linkedin{
             grid-column: 2/3;
@@ -159,10 +159,10 @@
         color: var(--ivory);
         padding: 0 0.3rem;
 
-        // @include mixins.landscape {
-        //     bottom: 2.55rem;
-        //     font-size: 1.1rem;
-        // }
+        @include mixins.wide-screen {
+            bottom: 3rem;
+            font-size: 1.25rem;
+        }
 
         &:hover{
             color: var(--ivory) !important;
