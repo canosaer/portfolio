@@ -18,7 +18,7 @@
 		grid-column-gap: 3%;
 		grid-row-gap: 1.5rem;
 		justify-content: center;
-		grid-template-columns: repeat(auto-fit, minmax(14rem, 0.29fr));
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 0.29fr));
 
 		@include mixins.medium-screen{
 			grid-column: 2/3;
@@ -73,7 +73,8 @@
 	&__link{
 		background-color: var(--coral);
 		padding: 10px;
-		color:var(--gray);
+		color: var(--gray);
+		font-size: 0.9rem;
 		font-weight:bold;
 		border-radius: 0.7rem;
 		transition: all 200ms ease-in-out;
