@@ -27,7 +27,7 @@ const projectData = {
             tag: "animation",
             url: "https://banner-ad.ericcanosa.com",
             repo: "https://github.com/canosaer/banner-ad",
-            desc: "Dark Moon is a science fiction board game I've been developing for over 10 years. This animated banner ad is an example of the kind of marketing I'm excited to do once the game is launched.",
+            desc: "Animated banner ad featuring",
         },
         {   name: "Big Top",
             tag: "corporate",
