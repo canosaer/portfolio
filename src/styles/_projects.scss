@@ -18,7 +18,7 @@
 		grid-column-gap: 3%;
 		grid-row-gap: 1.5rem;
 		justify-content: center;
-		grid-template-columns: repeat(auto-fit, minmax(17rem, 0.29fr));
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 0.29fr));
 
 		@include mixins.medium-screen{
 			grid-column: 2/3;
@@ -31,22 +31,15 @@
 		background: var(--teal);
 		user-select: none;
 		border-radius: 0.7rem;
-
-		&:hover{
-			color: unset !important;
-		}
 	}
 
 	&__subheading{
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		width: 100%;
-		transform: translate(-50%, -50%);
+		display: block;
 		font-weight: bold;
 		font-size: 1.8rem;
 		line-height: 1.1;
 		text-align: center;
+		margin-top: 1rem;
 		color: var(--gray);
 		text-transform: var(--text-transform);
 		font-family: var(--heading-font);
