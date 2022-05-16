@@ -16,7 +16,8 @@ export default function Projects() {
 
     const rowSlots = Math.floor(width / 348) || 1
     const rows = Math.floor(height / 480) || 1
-    const increment = rowSlots * rows
+    // const increment = rowSlots * rows
+    const increment = 2
 
     useEffect(() => {
         let filteredProjects = []
@@ -45,14 +46,14 @@ export default function Projects() {
 
                     if(i >= firstVisible && i < firstVisible+increment){
                         return(
-                            <article className="projects__card" key={key}>
-                                <a className="projects__subheading" href={project.url} rel="noreferrer" target="_blank">{project.name}</a>
+                            <a href={project.url} rel="noreferrer" target="_blank" className="projects__card" key={key}>
+                                <h3 className="projects__subheading">{project.name}</h3>
                                 <p className="projects__caption">{project.desc}</p>
                                 <div className="projects__link-row">
                                     <a className="projects__link" href={project.url} rel="noreferrer" target="_blank">View Site</a>
                                     <a className="projects__link" href={project.repo} rel="noreferrer" target="_blank">View Code</a>
                                 </div>
-                            </article>
+                            </a>
                         )
                     }
                 })}

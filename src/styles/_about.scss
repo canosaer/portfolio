@@ -5,58 +5,83 @@
 	@include mixins.default-grid;
     @include mixins.cube-face;
     background: linear-gradient(var(--blue), var(--teal));
- 
-    @include mixins.landscape {
-        padding: 0 3.5rem;
-    }
 
-    @include mixins.medium-screen{
-		grid-template-columns: 1fr minmax(0,80rem) 1fr;
-	}
-
-    &__heading{
-        @include mixins.page-heading;
-
-        @media (min-width: 415px) {
-            font-size: 3.25rem;
-            margin-top: 2rem;
-        }
-    }
-
-    &__subheading{
-        text-align: center;
-        font-family: var(--heading-font);
-        margin-bottom: 0.25rem;
-        font-size: 1.75rem;
-
-        @media (min-width: 415px) {
-            font-size: 2.25rem;
-        }
-    }
-
-    &__image{
-        @include mixins.default-img;
+    &__content-box{
+        height: 100%;
+        margin-bottom: 29.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         justify-self: center;
-        height: 14rem;
-        width: 14rem;
-        border-radius: 0.7rem;
-        margin: 1rem 0 1.2rem;
-        box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.55);
+        max-width: 60rem;
 
-        @media (min-width: 415px) {
-            margin: 2rem 0;
-            height: 15.75rem;
-            width: 15.75rem;
+        @include mixins.landscape {
+            margin-bottom: 17%;
         }
 
-       @include mixins.landscape {
-            height: 17rem;
-            width: 17rem;
-            margin: 4rem 0 3rem;
+        @include mixins.medium-screen {
+            margin-bottom: 15%;
         }
 
-        @include mixins.medium-screen{
+        @include mixins.wide-screen {
+            max-width: 80rem;
+            margin-bottom: 15%;
+        }
+    }
+
+    .heading-row{
+        @include mixins.default-grid;
+
+        &__content{
+            display: flex;
+            place-self: center center;
+        }
+
+        &__image{
+            @include mixins.default-img;
+            place-self: center end;
+            grid-row: 1/3;
+            grid-column: 1/2;
+            height: 7rem;
+            width: 7rem;
+            border-radius: 0.7rem;
+            margin-right: 3.5vw;
+
+            @include mixins.landscape {
+                height: 10rem;
+                width: 10rem;
+                margin-right: 4vw;
+            }
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+        &__heading{
+            @include mixins.page-heading;
+            grid-row: 1/2;
             grid-column: 2/3;
+            margin-bottom: 0.15rem;
+
+            @include mixins.landscape {
+                font-size: 3.75rem;
+            }
+        }
+
+        &__subheading{
+            @include mixins.page-heading;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            font-size: 1.6rem;
+            margin-top: 0.15rem;
+
+            @include mixins.landscape {
+                font-size: 2.25rem;
+            }
         }
     }
 
@@ -65,35 +90,31 @@
         line-height: 1.4;
         text-align: center;
 
-        @media (min-width: 415px) {
-            font-size: 1.2rem;
-        }
+    @include mixins.landscape {
+        font-size: 1.2rem;
+    }
 
-        @include mixins.landscape {
-            font-size: 1.5rem;
-        }
-
-        @include mixins.medium-screen{
-            grid-column: 2/3;
-        }
+    // @include mixins.medium-screen{
+    //     grid-column: 2/3;
+    // }
     }
 
     &__links{
-        margin-top: 1.2rem;
-        @include mixins.default-grid;
-        grid-template-columns: repeat(5,1fr);
+    @include mixins.default-grid;
+    grid-template-columns: repeat(5,1fr);
+    // margin-top: 1.5rem;
 
-        @media (min-width: 415px) {
-            margin-top: 2rem;
-        }
+    // @media (min-width: 415px) {
+    //     margin-top: 2rem;
+    // }
 
-        @include mixins.landscape {
-            margin-top: 3rem;
-        }
+    // @include mixins.landscape {
+    //     margin-top: 3rem;
+    // }
 
-        @include mixins.medium-screen{
-            grid-column: 2/3;
-        }
+    // @include mixins.medium-screen{
+    //     grid-column: 2/3;
+    // }
     }
 
     &__link{
@@ -101,9 +122,9 @@
         @include mixins.default-grid;
         position: relative;
 
-        @include mixins.landscape {
-            font-size: 2rem;
-        }
+        // @include mixins.landscape {
+        //     font-size: 2rem;
+        // }
 
         &_linkedin{
             grid-column: 2/3;
@@ -138,13 +159,14 @@
         color: var(--ivory);
         padding: 0 0.3rem;
 
-        @include mixins.landscape {
-            bottom: 2.55rem;
-            font-size: 1.1rem;
-        }
+        // @include mixins.landscape {
+        //     bottom: 2.55rem;
+        //     font-size: 1.1rem;
+        // }
 
         &:hover{
             color: var(--ivory) !important;
         }
     }
+    
 }
