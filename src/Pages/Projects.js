@@ -35,12 +35,40 @@ export default function Projects() {
         }
     }, [state])
 
+    const prevButton = 
+        firstVisible !== 0 ?
+            <button className="nav-row__prev" onClick={() => {setFirstVisible(firstVisible-increment)}}>
+                <FontAwesomeIcon className="projects__left-arrow" icon={"chevron-left"} />
+                <span className="nav-row__text">Prev</span>
+            </button>
+            :
+            null
+
+    const nextButton =
+        projects[firstVisible+increment] ?
+            <button onClick={() => {setFirstVisible(firstVisible+increment)}} className="nav-row__next">
+                <span className="nav-row__text">Next</span>
+                <FontAwesomeIcon className="nav-row__right-arrow" icon={"chevron-right"} />
+            </button>
+            :
+            null
+    
+    const navRow = 
+        <nav className="nav-row">
+            {prevButton}
+            {nextButton}
+        </nav>
+    
+    
+
     return (
         <section className="projects">
             <h2 className="projects__heading">Projects</h2>
             <Filters />
 
             <div className="projects__card-display">
+                {width < 415 ? prevButton : null}
+                {width < 415 ? nextButton : null}
                 {projects.map((project, i) => {
                     const key = `project--${i}`
 
@@ -57,24 +85,7 @@ export default function Projects() {
                         )
                     }
                 })}
-                <nav className="projects__nav">
-                    {firstVisible !== 0 ?
-                        <button className="projects__prev" onClick={() => {setFirstVisible(firstVisible-increment)}}>
-                            <FontAwesomeIcon className="projects__left-arrow" icon={"chevron-left"} />
-                            Prev
-                        </button>
-                        :
-                        null
-                    }
-                    {projects[firstVisible+increment] ?
-                        <button onClick={() => {setFirstVisible(firstVisible+increment)}} className="projects__next">
-                            Next
-                            <FontAwesomeIcon className="projects__right-arrow" icon={"chevron-right"} />
-                        </button>
-                        :
-                        null
-                    }
-                </nav>
+                {width >= 415 ? navRow : null}
                 
             </div>
         </section>

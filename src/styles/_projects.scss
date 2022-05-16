@@ -19,6 +19,7 @@
 		grid-row-gap: 1.5rem;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fit, minmax(13.25rem, 0.29fr));
+		position: relative;
 
 		@include mixins.medium-screen{
 			grid-column: 2/3;
@@ -85,27 +86,57 @@
 		}
 	}
 
-	&__nav{
+	.nav-row{
 		@include mixins.default-grid;
 		grid-column: 1/-1;
-	}
+	
+		&__next{
+			@include mixins.projects-nav-button;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			// place-self: center end;
+			box-shadow: unset;
+			// margin-top: -1.25rem;
+			font-size: 1.5rem;
+			border: 3px solid var(--coral);
+			border-radius: 999rem;
+			z-index: 1;
+			color: var(--coral) !important;
+			
+			
+			// grid-row: 1/2;
+			// grid-column: 1/2;
+			padding: 0.2rem 0.5rem;
+			user-select: none;
+			height: unset;
+			line-height: unset;
+		
+			&:hover{
+				color: var(--coral) !important;
+				box-shadow: unset;
+			}
+		}
 
-	&__next{
-		@include mixins.projects-nav-button;
-		place-self: center end;
-	}
+		&__prev{
+			@include mixins.projects-nav-button;
+			// place-self: center start;
+		}
 
-	&__prev{
-		@include mixins.projects-nav-button;
-		place-self: center start;
-	}
+		&__text{
+			display: none;
+			font-family: var(--text-font);
+			text-transform: unset !important;
+		}
 
-	&__right-arrow{
-		margin-left: 0.25rem;
-	}
+		&__right-arrow{
+			// margin-left: 0.25rem;
+		}
 
-	&__left-arrow{
-		margin-right: 0.25rem;
+		&__left-arrow{
+			margin-right: 0.25rem;
+		}
 	}
 
 
