@@ -1,11 +1,15 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import profile from '../img/profile.jpg'
+import {useWindowDimensions} from '../utilities'
 
 export default function About() {
 
+    console.log()
+
     return (
         <section className="about">
+            <p>{useWindowDimensions().width}</p>
             <div className="about__content-box">
                 <header className="heading-row">
                     <div className="heading-row__content">
