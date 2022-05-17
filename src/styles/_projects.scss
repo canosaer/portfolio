@@ -8,6 +8,7 @@
 	background: linear-gradient(var(--ivory), var(--teal));
 
     &__heading{
+		margin-top: 1rem;
         @include mixins.page-heading;
         color: var(--blue);
     }
@@ -18,7 +19,7 @@
 		grid-column-gap: 3%;
 		grid-row-gap: 1.5rem;
 		justify-content: center;
-		grid-template-columns: repeat(auto-fit, minmax(14.5rem, 0.29fr));
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 0.29fr));
 		position: relative;
 
 		@include mixins.medium-screen{

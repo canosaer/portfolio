@@ -8,12 +8,16 @@
 
     &__content-box{
         height: 100%;
-        margin-bottom: 29.5%;
+        margin-bottom: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         justify-self: center;
         max-width: 60rem;
+
+        @media (min-width: 415px) {
+            margin-bottom: 29.5%;
+        }
 
         @include mixins.landscape {
             margin-bottom: 17%;
@@ -99,17 +103,21 @@
     }
 
     &__text{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         line-height: 1.4;
         text-align: center;
 
-    @include mixins.landscape {
-        font-size: 1.2rem;
-    }
+        @media (min-width: 415px) {
+            font-size: 1.1rem;
+        }
 
-    @include mixins.wide-screen{
-        font-size: 1.85rem;
-    }
+        @include mixins.landscape {
+            font-size: 1.2rem;
+        }
+
+        @include mixins.wide-screen{
+            font-size: 1.85rem;
+        }
     }
 
     &__links{
