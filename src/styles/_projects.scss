@@ -94,56 +94,32 @@
 		&__next{
 			@include mixins.projects-nav-button;
 			position: absolute;
-			top: 107%;
-			right: -15vw;
-			// place-self: center end;
-			box-shadow: unset;
-			// margin-top: -1.25rem;
-			font-size: 1.5rem;
+			top: 47%;
+			right: -4.5vw;
 			border: 3px solid var(--coral);
 			border-radius: 999rem;
-			z-index: 1;
-			color: var(--coral) !important;
-			
-			
-			// grid-row: 1/2;
-			// grid-column: 1/2;
 			padding: 0.2rem 0.5rem;
-			user-select: none;
-			height: unset;
-			line-height: unset;
-		
-			&:hover{
-				color: var(--coral) !important;
-				box-shadow: unset;
+
+			@media (min-width: 415px) {
+				@include mixins.desktop-nav-button;
+				place-self: center end;
 			}
 		}
 
 		&__prev{
 			@include mixins.projects-nav-button;
 			position: absolute;
-			top: 107%;
-			left: -15vw;
-			// place-self: center start;
-			box-shadow: unset;
-			// margin-top: -1.25rem;
-			font-size: 1.5rem;
+			top: 47%;
+			left: -4.5vw;
 			border: 3px solid var(--coral);
 			border-radius: 999rem;
 			z-index: 1;
 			color: var(--coral) !important;
-			
-			
-			// grid-row: 1/2;
-			// grid-column: 1/2;
 			padding: 0.2rem 0.5rem;
-			user-select: none;
-			height: unset;
-			line-height: unset;
-		
-			&:hover{
-				color: var(--coral) !important;
-				box-shadow: unset;
+
+			@media (min-width: 415px) {
+				@include mixins.desktop-nav-button;
+				place-self: center start;
 			}
 		}
 
@@ -151,14 +127,24 @@
 			display: none;
 			font-family: var(--text-font);
 			text-transform: unset !important;
+
+			@media (min-width: 415px) {
+				display: unset;
+			}
 		}
 
 		&__right-arrow{
-			// margin-left: 0.25rem;
+
+			@media (min-width: 415px) {
+				margin-left: 0.5rem;
+			}
+			
 		}
 
 		&__left-arrow{
-			margin-right: 0.25rem;
+			@media (min-width: 415px) {
+				margin-right: 0.5rem;
+			}
 		}
 	}
 
@@ -176,6 +162,7 @@
     font-family: var(--text-font);
 	place-self: center center;
 	outline: none;
+	user-select: none;
 
 
 	@include mixins.landscape{

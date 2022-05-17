@@ -38,7 +38,7 @@ export default function Projects() {
     const prevButton = 
         firstVisible !== 0 ?
             <button className="nav-row__prev" onClick={() => {setFirstVisible(firstVisible-increment)}}>
-                <FontAwesomeIcon className="projects__left-arrow" icon={"chevron-left"} />
+                <FontAwesomeIcon className="nav-row__left-arrow" icon={"chevron-left"} />
                 <span className="nav-row__text">Prev</span>
             </button>
             :
