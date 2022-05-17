@@ -72,8 +72,12 @@
   line-height: unset;
 
   &:hover{
-    color: var(--blue) !important;
-    box-shadow: unset;
+
+    @media (min-width: 415px) {
+      color: var(--blue) !important;
+      box-shadow: unset;
+    }
+    
   }
 }
 
