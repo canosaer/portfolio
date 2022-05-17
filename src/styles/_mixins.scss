@@ -13,7 +13,7 @@
 }
 
 @mixin wide-screen {
-  @media (min-width: 1200px) {
+  @media (min-width: 1281px) {
     @content;
   }
 }
