@@ -41,7 +41,7 @@
 		font-size: 1.6rem;
 		line-height: 1.1;
 		text-align: center;
-		margin-top: 1rem;
+		margin: 1rem 0.5rem 0.5rem;
 		color: var(--gray);
 		text-transform: var(--text-transform);
 		font-family: var(--heading-font);
@@ -56,12 +56,10 @@
 	}
 
 	&__caption{
-		margin-top: 0.5rem;
 		font-size: 1rem;
-		padding: 0 1.5rem;
+		padding: 0 0.75rem;
 		line-height: 1.5;
 		text-align: center;
-		display: none;
 	}
 
 	&__link-row{
@@ -80,6 +78,7 @@
 		font-weight:bold;
 		border-radius: 0.7rem;
 		transition: all 200ms ease-in-out;
+		color: var(--ivory);
 
 		&:hover{
 			background: var(--blue);
@@ -94,8 +93,8 @@
 		&__next{
 			@include mixins.projects-nav-button;
 			position: absolute;
-			top: 47%;
-			right: -4.5vw;
+			top: 46.5%;
+			right: -3vw;
 			border: 3px solid var(--coral);
 			border-radius: 999rem;
 			padding: 0.2rem 0.5rem;
@@ -109,8 +108,8 @@
 		&__prev{
 			@include mixins.projects-nav-button;
 			position: absolute;
-			top: 47%;
-			left: -4.5vw;
+			top: 46.5%;
+			left: -3vw;
 			border: 3px solid var(--coral);
 			border-radius: 999rem;
 			z-index: 1;
@@ -163,6 +162,7 @@
 	place-self: center center;
 	outline: none;
 	user-select: none;
+	max-width: 32.1rem;
 
 
 	@include mixins.landscape{
@@ -188,26 +188,4 @@
 			user-select: none;
 		}
 	}
-}
-
-.swiper-container{
-    width: 100%;
-}
-
-.swiper-wrapper{
-    width: 100%;
-}
-
-.swiper-slide {
-    @include mixins.default-grid;
-    grid-template-columns: 2rem 1fr 2rem;
-    width: 100%;
-    background: white;
-    color: black;
-    border: 1px solid red;
-}
-
-.swiper-pagination{
-    width: 100%;
-    height: 2rem;
 }
