@@ -8,14 +8,13 @@
 	background: linear-gradient(var(--ivory), var(--teal));
 
     &__heading{
-		margin-top: 1rem;
         @include mixins.page-heading;
         color: var(--blue);
     }
 
 	&__card-display{
 		@include mixins.default-grid;
-		padding: 1rem 3%;
+		padding: 0 3%;
 		grid-column-gap: 3%;
 		grid-row-gap: 1.5rem;
 		justify-content: center;
@@ -60,6 +59,7 @@
 		padding: 0 0.75rem;
 		line-height: 1.5;
 		text-align: center;
+		display: none;
 	}
 
 	&__link-row{
@@ -96,19 +96,18 @@
         justify-self: center;
 
         @media (min-width: 415px) {
-            margin-bottom: 29.5%;
+            margin-bottom: 13%;
         }
 
         @include mixins.landscape {
-            margin-bottom: 17%;
+            margin-bottom: 7%;
         }
 
         @include mixins.medium-screen {
-            margin-bottom: 15%;
+            margin-bottom: 3%;
         }
 
         @include mixins.wide-screen {
-            margin-bottom: 17%;
 			max-width: 80rem;
         }
 	}
@@ -179,7 +178,7 @@
 
 .dropdown-filters{
 	font-size: 1.05rem;
-	margin: 0.5rem 3% 0;
+	margin: 0 3%;
 	padding: 0.25rem;
 	border-radius: 0.7rem;
     background-color: var(--blue);
@@ -207,7 +206,6 @@
 		justify-content: space-evenly;
 		width: 100%;
 		padding: 0 3%;
-		margin-top: 1rem;
 		font-size: 1.05rem;
 
 		@include mixins.medium-screen{

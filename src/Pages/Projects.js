@@ -14,9 +14,9 @@ export default function Projects() {
     const width = useWindowDimensions().width
     const height = useWindowDimensions().height
 
-    const rowSlots = Math.floor(width / 275) || 1
+    const rowSlots = Math.floor(width / 278) || 1
     const rows = Math.floor(height / 372.5) || 1
-    const increment = (rowSlots < 4 ? rowSlots : 3) * rows
+    const increment = (rowSlots < 5 ? rowSlots : 4) * (rows < 3 ? rows : 2)
 
     useEffect(() => {
         let filteredProjects = []
