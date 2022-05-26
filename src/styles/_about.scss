@@ -105,7 +105,7 @@
     &__text{
         font-size: 1.3rem;
         line-height: 1.4;
-        text-align: center;
+        text-align: left;
 
         @media (min-width: 415px) {
             font-size: 1.1rem;
@@ -116,7 +116,7 @@
         }
 
         @include mixins.wide-screen{
-            font-size: 1.85rem;
+            font-size: 1.82rem;
         }
     }
 

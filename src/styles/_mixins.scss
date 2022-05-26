@@ -18,6 +18,12 @@
   }
 }
 
+@mixin extra-wide-screen {
+  @media (min-width: 1369px) {
+    @content;
+  }
+}
+
 @mixin default-grid{
   display: grid;
   grid-auto-rows: auto;
