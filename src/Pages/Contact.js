@@ -9,6 +9,7 @@ export default function Contact() {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [parts, setParts] = useState([])
+    const [submit, setSubmit] = useState(false)
 
     const ContactSchema = Yup.object().shape({
         subject: Yup.string().required('Required'),
@@ -16,8 +17,14 @@ export default function Contact() {
       });
 
     const handleMail = (enabled) => {
-        if(enabled) setParts(["@", 'com', 'canosaer', 'gmail', ".", ])
-        else setParts([])
+        if(enabled){
+            setParts(["@", 'com', 'canosaer', 'gmail', ".", ])
+            setSubmit(true)
+        } 
+        else{
+            setParts([])
+            setSubmit(false)
+        } 
     }
 
     return (
@@ -34,9 +41,9 @@ export default function Contact() {
                     >
                     {({ touched }) => (
                         <Form className="form">
-                            <label className="form__label form__label_subject" htmlFor="subject">Subject <span className={!subject && touched.subject ? "form__error form__error_subject" : "form__error form__error_subject transparent"}>(required)</span></label>
+                            <label className="form__label form__label_subject" htmlFor="subject">Subject <span className={!subject && (touched.message || submit) ? "form__error form__error_subject" : "form__error form__error_subject transparent"}>(required)</span></label>
                             <Field value={subject} onChange={(e) => setSubject(e.target.value)} className="form__input form__input_subject" name="subject" as="textarea" />
-                            <label className="form__label form__label_message" htmlFor="message">Message <span className={!message && touched.message ? "form__error form__error_message" : "form__error form__error_message transparent"}>(required)</span></label>
+                            <label className="form__label form__label_message" htmlFor="message">Message <span className={!message && (touched.message || submit) ? "form__error form__error_message" : "form__error form__error_message transparent"}>(required)</span></label>
                             <Field value={message} onChange={(e) => setMessage(e.target.value)} className="form__input form__input_message" name="message" as="textarea"/>
                             <a
                                 onMouseEnter={ () => handleMail(true) }
