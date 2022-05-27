@@ -7,4 +7,120 @@
     height: 100vh;
     width: 100vw;
     background: linear-gradient(var(--ivory), var(--coral));
+
+    &__content-box{
+        @include mixins.content-box;
+		width: 100%;
+        margin-bottom: 30%;
+        max-width: 60rem;
+    }
+
+    &__heading{
+        @include mixins.page-heading;
+        color: var(--blue);
+		user-select: none;
+    }
+
+    &__subheading{
+        font-size: 1.3rem;
+        line-height: 1.4;
+        text-align: left;
+        color: var(--blue);
+        text-align: center;
+
+        @media (min-width: 415px) {
+            font-size: 1.1rem;
+        }
+
+        @include mixins.landscape {
+            font-size: 1.2rem;
+        }
+
+        @include mixins.wide-screen{
+            font-size: 1.85rem;
+        }
+    }
+
+    &__at{
+        margin-left: 0.2rem;
+        user-select: none;
+
+        &:before{
+            content: "canosaer"
+        }
+
+        &:after{
+            content: "gmail.com"
+        }
+    }
+
+    &__separator{
+        position: relative;
+    }
+
+    &__icon{
+        position: absolute;
+        top: 0.25rem;
+        right: 1rem;
+    }
+
+    &__link:hover{
+        color: var(--blue) !important;
+    }
+
+
+}
+
+.form{
+    &__label{
+        font-size: 2rem;
+        font-family: var(--heading-font);
+        margin-bottom: 0.4rem;
+    }
+
+    &__input{
+        width: 100%;
+        color: rgba(0,0,0,0.9);
+        padding: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: 2px solid var(--blue);
+        outline: none;
+        border-radius: 0.2rem;
+        margin-bottom: 1rem;
+        line-height: 1.05;
+        resize: none;
+        background: white;
+
+        &:focus{
+            border: 2px solid var(--blue);
+        }
+
+        &_subject{
+            height: 2.65rem;
+        }
+
+        &_message{
+            height: 10rem;
+            margin-bottom: 1.5rem;
+        }
+        
+    }
+
+    &__error{
+        font-size: 1.5rem;
+        margin-left: 0.25rem;
+    }
+
+    &__button{
+        color: var(--ivory);
+        background-color: var(--teal);
+        padding: 0.5rem 1rem;
+        border-radius: 999rem;
+        user-select: none;
+
+        &:hover{
+            color: var(--ivory) !important;
+        }
+    }
 }

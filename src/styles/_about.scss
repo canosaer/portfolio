@@ -7,12 +7,8 @@
     background: linear-gradient(var(--blue), var(--teal));
 
     &__content-box{
-        height: 100%;
+        @include mixins.content-box;
         margin-bottom: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        justify-self: center;
         max-width: 60rem;
 
         @media (min-width: 415px) {
@@ -116,7 +112,7 @@
         }
 
         @include mixins.wide-screen{
-            font-size: 1.9rem;
+            font-size: 1.85rem;
         }
     }
 

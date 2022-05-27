@@ -95,3 +95,11 @@
   border: unset;
   font-size: 1.4rem
 }
+
+@mixin content-box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-self: center;
+}
