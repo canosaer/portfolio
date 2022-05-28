@@ -94,7 +94,7 @@
 	&__content{
 		@include mixins.content-box;
 		width: 100%;
-        margin-bottom: 20%;
+        margin-bottom: 18%;
 
         @media (min-width: 415px) {
             margin-bottom: 13%;
