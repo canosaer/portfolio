@@ -26,7 +26,7 @@
         }
 
 		@include mixins.extra-wide-screen {
-            margin-bottom: 5.75%;
+            margin-bottom: 5.25%;
         }
     }
 
@@ -123,6 +123,10 @@
 
             @include mixins.medium-screen {
                 height: 8.75rem;
+            }
+
+            @include mixins.wide-screen {
+                height: 18rem;
             }
         }
         
