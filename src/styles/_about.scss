@@ -20,7 +20,7 @@
         }
 
         @include mixins.medium-screen {
-            margin-bottom: 15%;
+            margin-bottom: 13%;
         }
 
         @include mixins.wide-screen {
@@ -113,6 +113,10 @@
 
         @include mixins.landscape {
             font-size: 1.2rem;
+        }
+
+        @include mixins.medium-screen {
+            font-size: 1.45rem;
         }
 
         @include mixins.wide-screen{
