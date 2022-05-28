@@ -43,7 +43,7 @@
             margin-top: 1rem;
         }
 
-        @include mixins.wide-screen {
+        @include mixins.extra-wide-screen {
             margin-top: unset;
         }
     }
