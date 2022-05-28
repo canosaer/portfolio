@@ -109,6 +109,10 @@
             margin-bottom: 3%;
         }
 
+		@include mixins.wide-screen {
+            margin-bottom: 6.95%;
+        }
+
 		@include mixins.extra-wide-screen {
             margin-bottom: 5.75%;
         }

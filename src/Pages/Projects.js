@@ -15,7 +15,7 @@ export default function Projects() {
     const height = useWindowDimensions().height
 
     const rowSlots = Math.floor(width / 278) || 1
-    const rows = Math.floor(height / 357.5) || 1
+    const rows = width < 1369 && width > 1281 ? 1 : (Math.floor(height / 357.5) || 1)
     const increment = (rowSlots < 4 ? rowSlots : 3) * (rows < 3 ? rows : 2)
 
     useEffect(() => {

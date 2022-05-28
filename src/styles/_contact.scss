@@ -25,6 +25,10 @@
             margin-bottom: 3%;
         }
 
+        @include mixins.wide-screen {
+            margin-bottom: 3.35%;
+        }
+
 		@include mixins.extra-wide-screen {
             margin-bottom: 5.25%;
         }
@@ -34,6 +38,14 @@
         @include mixins.page-heading;
         color: var(--teal);
 		user-select: none;
+
+        @include mixins.wide-screen {
+            margin-top: 1rem;
+        }
+
+        @include mixins.wide-screen {
+            margin-top: unset;
+        }
     }
 
     &__subheading{
