@@ -63,7 +63,7 @@ export default function Projects() {
     return (
         <section className="projects">
             <div className="projects__content">
-                <h2 className="projects__heading">{height}</h2>
+                <h2 className="projects__heading">Projects</h2>
                 <Filters />
 
                 <div className="projects__card-display">
