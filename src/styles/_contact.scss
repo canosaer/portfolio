@@ -118,8 +118,12 @@
         }
 
         &_message{
-            height: 8.75rem;
             margin-bottom: 1.5rem;
+            height: 12rem;
+
+            @include mixins.medium-screen {
+                height: 8.75rem;
+            }
         }
         
     }
