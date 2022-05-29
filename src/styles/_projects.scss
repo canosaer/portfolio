@@ -17,10 +17,14 @@
 		@include mixins.default-grid;
 		padding: 0 3%;
 		grid-column-gap: 3%;
-		grid-row-gap: 1.5rem;
+		grid-row-gap: 1rem;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fit, minmax(14rem, 0.29fr));
 		position: relative;
+
+		@media (min-height: 840px) {
+            grid-row-gap: 1.5rem;
+        }
 
 		@include mixins.medium-screen{
 			grid-column: 2/3;
@@ -29,10 +33,14 @@
 
 	&__card{
 		@include mixins.image-slot;
-		padding-bottom: 100%;
+		padding-bottom: 93%;
 		background: var(--teal);
 		user-select: none;
 		border-radius: 0.7rem;
+
+		@media (min-height: 840px) {
+            padding-bottom: 100%;
+        }
 	}
 
 	&__subheading{
