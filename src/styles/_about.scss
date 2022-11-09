@@ -28,6 +28,10 @@
             margin-bottom: 14.25%;
         }
 
+        @include mixins.extra-wide-screen {
+            margin-bottom: 13%;
+        }
+
         @include mixins.widest-screen {
             margin-bottom: 17%;
         }
