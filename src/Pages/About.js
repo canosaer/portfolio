@@ -17,7 +17,7 @@ export default function About() {
                     </div>
                 </header>
                 <p className="about__text">
-                    I first got into computers with the release of DOOM in 1993 and it has been an awesome ride ever since. I've dabbled with hardware and networks, but my passion is developing user experiences that create novel opportunities for people to work, learn, and play.
+                    I first got into computers with the release of DOOM in 1993 and it has been an awesome ride ever since. I've dabbled with hardware and devops, but my passion is developing user experiences that create novel opportunities for people to work, learn, and play.
                 </p>
                 <div className="about__links">
                     <a className="about__link about__link_linkedin" href="https://www.linkedin.com/in/eric-canosa/" rel="noreferrer" target="_blank">< FontAwesomeIcon className="about__icon about__icon_linkedin" icon={["fab", "linkedin-in"]} /> <p className="about__tooltip about__tooltip_linkedin">linkedin</p></a>

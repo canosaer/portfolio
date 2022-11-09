@@ -24,6 +24,12 @@
   }
 }
 
+@mixin widest-screen {
+  @media (min-width: 1537px) {
+    @content;
+  }
+}
+
 @mixin default-grid{
   display: grid;
   grid-auto-rows: auto;
